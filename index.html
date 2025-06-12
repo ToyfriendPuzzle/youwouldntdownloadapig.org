@@ -3,11 +3,27 @@
 		oink
 	</title>
 </head>
-<body>
-	<a><img src="./glass.png" style="position:absolute;width:100%;height:100%;z-index:9;"/></a>
-    <iframe id="pig" width=100% height=100% src="https://www.youtube.com/embed/TcJSs2bNYTQ?autoplay=1&loop=1&controls=0&showinfo=0&modestbranding=1&list=PLKR4vrhgggXu5WRuvnK_Obsu-4X6kMrL_" frameborder="0" allowfullscreen></iframe>
-    <script>
-        var video = document.getElementById("pig");
-        pig.playVideo();
-    </script>
+<style>
+    #glass
+    {
+        position:absolute;
+        width:1000%;
+        height:1000%;
+        z-index:9;
+        animation: glass 10s linear 0s;
+    }
+    @keyframes glass
+    {
+        0%{left: -10000%; top:0%;}
+        87.5%{left: -10000%; top:0%;}
+        100%{left: 0%; top:0%;}
+    }
+</style>
+<body style="overflow:hidden;text-align:center;">
+	<a><img id="glass" src="./glass.png"/></a>
+    <video controls="" loop style="height:auto;width:auto;">
+        <source src="youwouldntdownloadapig.mp4" type="video/mp4">
+    </video>
 </body>
+
+
