@@ -7,26 +7,27 @@
     *
     {
         overflow:hidden;
-        background:rgba(253,215,228,1);
     }
     #glass
     {
         position:absolute;
         width:133%;
-        margin: -320px;
         height:133%;
+        margin:-1vh 0;
         z-index:9;
-        animation: glass 7s linear 0s;
+        animation: glass 8s linear 0s;
     }
     @keyframes glass
     {
-        0%{left: 10000%; top:0%;}
-        87.5%{left: 10000%; top:0%;}
-        100%{left: 0%; top:0%;}
+        0%{left: -10000%; top:0%;}
+        87.5%{left: -10000%; top:0%;}
+        100%{left: 0px; top:0px%;}
     }
 </style>
-<body style="text-align:center;">
-    <a href="https://bibletwo.org/"><img id="glass" src="./glass.png"/></a>
+<body style="text-align:center;background:rgba(253,215,228,1);">
+    <div id="glass">
+        <a href="https://bibletwo.org/"><img src="./glass.png" style="width:133%;height:133%;"/></a>
+    </div>
     <video controls="" loop style="height:auto;width:auto;">
         <source src="youwouldntdownloadapig.mp4" type="video/mp4">
     </video>
